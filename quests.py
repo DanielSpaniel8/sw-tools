@@ -4,8 +4,8 @@ with open('./itemvar_gamedata.gdata', 'rb') as file:
     gamedata = file.read()
 
 machine_name = input('machine name: ')
-title = input('title')
-target_level = input('target level')
+title = input('title: ')
+target_level = input('target level: ')
 
 quest = b''
 
@@ -18,7 +18,7 @@ quest += b'\x1a'+ bytes([quest_size])
 # add quest data with tags and pointers
 quest += b'\x0a'+ bytes([len(machine_name)])+ bytes(machine_name, 'ascii')
 
-quest += b'\x12'+ bytes([len(title)])+ bytes(target_level, 'ascii')
+quest += b'\x12'+ bytes([len(title)])+ bytes(title, 'ascii')
 
 quest += b'\x22'+ bytes([len(target_level)])+ bytes(target_level, 'ascii')
 
