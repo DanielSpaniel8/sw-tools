@@ -16,3 +16,8 @@ itemvar.py
 
 Add items to gamedata.gdata which can then be used to store persistant variables.
 Run the script and enter the variable name.
+
+quests.py
+
+Add custom quests to gamedata.gdata.
+Run the script and enter the required data.
